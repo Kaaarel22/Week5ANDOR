@@ -1,34 +1,39 @@
-﻿//0 (or below) - Freezing
-//from 0 - 5 - Cold
-//from 5 - 10 - Chilly
-//from 10 - 15 - Cool
-//from 15 - 28 - Warm
-//above 28 - Boiling hot
+//AND (&&) and OR (||) logical operators
 
-Console.WriteLine("Enter the current temperature:");
-int currentTemp = Int32.Parse(Console.ReadLine());
+//AND
+//true && true => true
+//true && fakse => false
+//false && true => false
+//false && false => false
 
-if (currentTemp <= 0)
+string username, password; //username: admind //password: admin1234
+
+Console.WriteLine("Enter username:");
+username = Console.ReadLine();
+
+Console.WriteLine("Enter password:");
+password = Console.ReadLine();
+
+//OR
+//true || true => true
+//true || fakse => true
+//false || true => true
+//false || false => false
+
+if (username != "admin" || password != "admin1234") //=! => NOT
 {
-    Console.WriteLine("Freezing");
-}
-else if (currentTemp > 0 && currentTemp < 5)
-{
-    Console.WriteLine("Cold");
-}
-else if (currentTemp >= 5 && currentTemp < 10)
-{
-    Console.WriteLine("Chilly");
-}
-else if (currentTemp >= 10 && currentTemp < 15)
-{
-    Console.WriteLine("Cool");
-}
-else if (currentTemp >= 15 && currentTemp < 28)
-{
-    Console.WriteLine("Warm");
+    Console.WriteLine("Invalid credentials!");
 }
 else
 {
-    Console.WriteLine("Boiling hot");
+    Console.WriteLine("Welcome");
 }
+
+//if (username == "admin" && password == "admin1234")
+//{
+//    Console.WriteLine("Welcome!");
+//}
+//else
+//{
+//    Console.WriteLine("Invalid credentials!");
+//}
